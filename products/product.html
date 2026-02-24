@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <title>navbar cart</title>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="container-fluid">
+
+      <img src="/img/logo2..jpg" alt="logo">
+      <span class="one-line"></span>
+      <div class="title">
+        <div>PERSONAL</div>
+        <div>FINANCE</div>
+        <div>MANAGER</div>
+      </div>
+      <div class="mainnavbar">
+        <ul class="navbar">
+          <li class="nav-item"><a href="#">HOME</a></li>
+          <li class="nav-item"><a href="#">What People Say</a></li>
+          <li class="nav-item"><a href="#">How Q Works</a></li>
+          <li class="nav-item"><a href="#">Insights</a></li>
+          <li class="nav-item"><a href="#">FAQ's</a></li>
+
+
+          <li> <button class="btn btn-primary" type="button" id="Register-btn" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onclick=""> Register Now</button></li>
+          <div class="add-card">
+            <div class="cart-icon" id="cart-icon">
+
+              <i class="fa-solid fa-cart-arrow-down fa-2xl" style="cursor: pointer;" data-bs-toggle="offcanvas"
+                data-bs-target="#cartOffcanvas">
+              </i>
+
+
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas"
+                aria-labelledby="cartOffcanvasLabel">
+
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="cartOffcanvasLabel">
+                    🛒 Shopping Cart
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                  </button>
+                </div>
+
+                <div class="offcanvas-body">
+                  <div class="cart">
+                    <h2>Shopping Cart</h2>
+                    <div id="cartItems"></div>
+                    <div class="total" id="totalPrice">Total: $0</div>
+                  </div>
+                </div>
+
+              </div>
+
+              <span id="cart-count">0</span>
+
+            </div>
+          </div>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasRightLabel">Presonal Finance Registertoin Form</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+              <div class="container">
+
+                <h2>Registration Form</h2>
+                <form action="#" id="regitesionForm">
+                  <div class="input-field">
+                    <label> First Name</label>
+                    <input type="text" id="firstName" placeholder="Enter your first name">
+                    <div class="erroe" id="firstNameError"></div>
+                  </div>
+
+                  <div class="input-field">
+                    <label> last Name</label>
+                    <input type="text" id="lastName" placeholder="Enter your last name">
+                    <div class="erroe" id="lastNameError"></div>
+                  </div>
+
+                  <div class="input-field">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="Enter your username">
+                    <div class="erroe" id="usernameError"></div>
+                  </div>
+
+                  <div class="input-field">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <div class="error" id="emailError"></div>
+
+                  </div>
+
+                  <div class="input-field">
+                    <label>PhoneNumber</label>
+                    <input type="text" id="phone" maxlength="10">
+                    <div class="error" id="phoneError"></div>
+                  </div>
+
+                  <div class="input-field">
+                    <label>Password</label>
+                    <input type="password" id="password">
+                    <div class="error" id="passwordError"></div>
+                  </div>
+
+                  <div class="input-field">
+                    <label> Confirm Password</label>
+                    <input type="password" id="confirmpassword">
+                    <div class="error" id="confirmpasswordError"></div>
+                  </div>
+                  <button type="submit">Register</button>
+
+                </form>
+
+                <div class="result" id="result">registertoin Successfull</div>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="product-details">
+    <div>
+      <h2 id="product-title"></h2>
+      <div id="product-image"></div>
+    </div>
+    <div>
+
+      <p id="product-price"></p>
+      <p id="product-description"></p>
+      <button id="addToCartBtn" class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+  </div>
+</body>
+<script src="product.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
