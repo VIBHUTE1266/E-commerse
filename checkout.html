@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <link rel="stylesheet" href="checkout.css">
-  <link rel="stylesheet" href="style.css">
-    <title>checkout-products</title>
+  <link rel="stylesheet" href="style.css">  
+  <title>checkout-products</title>
 </head>
+
 <body>
-     <!-- <div id="products" class="product-container">
+  <!-- <div id="products" class="product-container">
     </div> -->
 
-     <nav class="navbar">
+  <nav class="navbar">
     <div class="container-fluid">
 
       <img src="img/logo2..jpg" alt="logo">
@@ -25,7 +27,7 @@
       </div>
       <div class="mainnavbar">
         <ul class="navbar">
-          <li class="nav-item"><a href="#">HOME</a></li>
+          <li class="nav-item"><a href="../index.html">HOME</a></li>
           <li class="nav-item"><a href="#">What People Say</a></li>
           <li class="nav-item"><a href="#">How Q Works</a></li>
           <li class="nav-item"><a href="#">Insights</a></li>
@@ -78,6 +80,15 @@
                 aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
+              <div class="cart">
+                    <h2>Shopping Cart</h2>
+                    <div id="cartItems"></div>
+                    <div class="total" id="totalPrice">Total: $0</div>
+                  </div>
+
+                   <div class="d-grid mt-3">
+                  <button class="btn btn-primary" onclick="goTocheckout()">Checkout</button>
+                </div>
 
               <div class="container">
 
@@ -118,7 +129,7 @@
                     <label>Password</label>
                     <input type="password" id="password">
                     <div class="error" id="passwordError"></div>
-                  </div> 
+                  </div>
 
                   <div class="input-field">
                     <label> Confirm Password</label>
@@ -137,56 +148,96 @@
       </div>
     </div>
   </nav>
-    
-    <div class="container my-5" >
 
-        <h2 class="mb-4">Checkout</h2>
-        <div id="checkout-items" class="" >
+  <div class="container my-5">
+
+    <h2 class="mb-4">Checkout</h2>
+    <div class="checkout-form-wrapper">
+      <div class="checkout-left">
+        <div id="checkout-items" class="">
         </div>
-
         <h4 class="text-ent">Total: $ <span id="total-amount">0</span></h4>
         <hr class="my-4">
-
-
-        <div class="shoping-wapre my-5">
-        <h4>SHipping Details</h4>
-        <form action="#" id="checkout-form">
-            <div class="mb-3">
-                <label for="#" class="from-label">Full Name</label>
-                <input type="text" id="fullname" class="form-control">
-            </div>
-  
-  
-            <div class="mb-3">
-                <label for="#" class="from-label">Address</label>
-               <textarea  id="address" class="form-control"></textarea>
-            </div>
-  
-            <div class="mb-3">
-                <label for="#" class="from-label">City</label>
-                <input type="text" id="city" class="form-control">
-            </div>
-            
-            <div class="mb-3">
-                <label for="#" class="from-label">Pincode</label>
-                <input type="text" id="pincode" class="form-control">
-            </div>
-  
-            <div class="mb-3">
-                <label for="#" class="from-label">Phone Number</label>
-                <input type="text" id="mobile" class="form-control">
-            </div>
-  
-  
-            <button type="submit" class="btn btn-success w-100">Place Order</button>
-        </form>
-  
-        </div>
-
       </div>
-      
+      <div class="checkout-right">
+        <div class="shoping-wapre my-5">
+          <h4>Shipping Details</h4>
+          <form action="#" id="checkout-form">  
+            <div class="mb-3">
+              <label for="#" class="from-label">Full Name</label>
+              <input type="text" id="fullname" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="#" class="from-label">Address</label>
+              <textarea id="address" class="form-control"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="#" class="from-label">City</label>
+              <input type="text" id="city" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="#" class="from-label">Pincode</label>
+              <input type="text" id="pincode" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="#" class="from-label">Phone Number</label>
+              <input type="text" id="mobile" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success w-100">Place Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <!-- footer  -->
+   <footer class="footer">
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-section">
+      <h3>Personal Finance Manager</h3>
+      <p>
+        Manage your expenses, track savings, and achieve your financial goals easily and securely.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Insights</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>Email: support@pfm.com</p>
+      <p>Phone: +91 9876543210</p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Personal Finance Manager. All Rights Reserved.</p>
+  </div>
+</footer>
+
 
 </body>
 <script src="checkout.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </html>

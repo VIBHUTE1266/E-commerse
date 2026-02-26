@@ -316,6 +316,8 @@ if (savedCart) {
     cart = savedCart;
     renderCartItem();
 }
+// footer js
+document.getElementById("year").textContent = new Date().getFullYear();
 
 
 // PRoduct list lowar to hight and name 
